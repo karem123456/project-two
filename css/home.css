@@ -1,0 +1,219 @@
+:root{
+    --main-color: rgb(213, 163, 12);
+    --transparent-color: rgb(50, 50, 50 , 50%);
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media(min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+@media(min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media(min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/* start header */
+.header-color{
+    background-color: var(--transparent-color);
+    position: relative;
+    left: -45px;
+    top: 2;
+    width: 98vw;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 88px;
+}
+header{
+    position: absolute;
+    left: 45px;
+    right: 45px;
+}
+header .container::after{
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    background-color: #a3a3a3;
+    bottom: 3px;
+}
+header img{
+    height: 50px;
+}
+header nav{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul a {
+    display: block;
+    font-size: 17px;
+    font-weight: 800;
+    color:white;
+    text-decoration: none;
+    padding: 30px 15px;
+    transition: .3s;
+    position: relative;
+    z-index: 2;
+}
+header nav ul a:hover{
+    box-sizing: border-box;
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);    
+}
+/* end header */
+/* start landing */
+.land{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color);
+    background-image: url("../image/land.jpeg");
+    background-size: cover;
+}
+.text-intro{
+    width: 45%;
+    min-width: 400px;
+    height: 300px;
+    background-color: rgb(213, 163, 12, 60%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.text-intro h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    text-align: center;
+    padding: 30px 5px;
+}
+.text-intro p{
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
+}
+/* end landing */
+/* start heading-text */
+.heading-text{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.heading-text h2{
+    font-size: 40px;
+    opacity: 0.7;
+    letter-spacing: 2px;
+    position: relative;
+}
+.heading-text h2::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 150px;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 20px;
+}
+.heading-text h2::before{
+    content: "";
+    position: absolute;
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border: 3px solid black;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -21px;
+    border-radius: 50%;
+    z-index: 3;
+}
+/* end heading-text */
+/* start skills */
+.skills{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding-left: 20%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    gap: 20px;
+    background-color: var(--transparent-color);
+    width: 90%;
+    margin: 0 5%;
+    border-radius: 70px;
+    padding-top: 30px;
+}
+.skills .skill{
+    display: flex;
+}
+.skills i{
+    font-size: 40px;
+    padding: 20px;
+}
+.skills h2{
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.skills p{    
+    font-size: 15px;
+    opacity: .8;
+    letter-spacing: 1px;
+}
+/* end skills */
+/* start contact */
+.contact{
+    background-color: var(--transparent-color);
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.inf{
+    display: grid;
+    grid-template-columns: repeat(2 , auto);
+    justify-content: space-evenly;
+    align-content: center;
+    height: 300px;
+}
+.inf i{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.email{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.github{
+    font-size: 25px;
+    font-weight: bolder;
+}
+/* end contact */
